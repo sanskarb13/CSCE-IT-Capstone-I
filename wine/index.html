@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutique Wine &amp; Everyday Bottles — Liquor Palace McKinney</title>
+  <meta name="description" content="Tasted, vetted wines chosen by people who know the difference. Everyday bottles under $20 to anniversary-worthy vintages. Case discounts and special orders. McKinney, TX.">
+  
+  <meta property="og:title" content="Boutique Wine &amp; Everyday Bottles — Liquor Palace McKinney">
+  <meta property="og:description" content="We taste, we compare, and we pick what belongs on the shelf. Case discounts, wedding planning, and pairings in McKinney, TX.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://liquorpalacetx.com/wine/">
+  <meta property="og:image" content="/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/liquor-palace-icon.svg" type="image/svg+xml">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap">
+
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main Navigation">
+        <a href="/" class="nav__logo" aria-label="Liquor Palace Home">
+          <img src="/liquor-palace-icon.svg" alt="Liquor Palace Shield Logo" class="nav__logo-img" width="44" height="44">
+          <span>Liquor Palace</span>
+        </a>
+        
+        <button class="nav__toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle navigation menu">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+        
+        <ul class="nav__links" id="primary-menu" role="list">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/beer/" class="nav__link">Beer</a></li>
+          <li><a href="/wine/" class="nav__link nav__link--active" aria-current="page">Wine</a></li>
+          <li><a href="/spirits/" class="nav__link">Spirits</a></li>
+          <li><a href="/contact/" class="nav__link">Find Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main id="main-content">
+    <section class="category-hero" aria-labelledby="category-title">
+      <div class="container">
+        <span class="badge">Hand-Selected</span>
+        <h1 id="category-title">Boutique &amp; Everyday Wine</h1>
+        <hr class="gold-rule">
+        <p class="category-hero__intro">
+          We don't stock wine by the algorithm. We taste, we compare, and we pick what belongs on the shelf.
+        </p>
+      </div>
+    </section>
+    
+    <section class="category-content">
+      <div class="container">
+        <div class="category-content__body">
+          <p>
+            Whether you need a reliable, delicious table red under twenty dollars or a cellar-worthy Napa Cabernet for an anniversary dinner, our shelves are curated for real drinking value. You won't find generic supermarket surplus here—just bottles that overdeliver for the price.
+          </p>
+          <p>
+            Our staff can actually talk you through a dinner pairing, help you balance a mixed case for a dinner party, or suggest a distinctive bottle that makes a memorable gift.
+          </p>
+          <p>
+            Hosting a wedding, corporate reception, or anniversary? We work with hosts throughout McKinney, Frisco, Allen, and Plano to plan quantities, varietals, and case orders with dedicated case pricing.
+          </p>
+          
+          <div class="category-cta-box scroll-reveal reveal-on-scroll">
+            <h3>Event Planning &amp; Case Inquiries</h3>
+            <p>
+              Looking for a specific vintage, champagne for a toast, or a bulk case recommendation? We are here to help you plan your event.
+            </p>
+            <a href="/contact/" class="btn btn--primary">Inquire About Case Orders</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <img src="/liquor-palace-icon.svg" alt="" class="site-footer__icon" width="32" height="32" loading="lazy">
+        <span>Liquor Palace</span>
+      </div>
+      <address class="site-footer__address">
+        5951 Alma Rd, McKinney, TX 75070 · Serving McKinney, Frisco, Allen &amp; Plano
+      </address>
+      <ul class="site-footer__nav" role="list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/beer/">Beer</a></li>
+        <li><a href="/wine/">Wine</a></li>
+        <li><a href="/spirits/">Spirits</a></li>
+        <li><a href="/contact/">Find Us</a></li>
+      </ul>
+      <p class="site-footer__legal">
+        Must be 21 years of age or older to purchase alcoholic beverages. Please drink responsibly.
+      </p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/scripts/nav.ts"></script>
+  <script type="module" src="/src/scripts/scroll-reveal.ts"></script>
+</body>
+</html>

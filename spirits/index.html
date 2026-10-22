@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Small-Batch Spirits &amp; Texas Whiskeys — Liquor Palace McKinney</title>
+  <meta name="description" content="Small-batch bourbons, Texas whiskeys, sipping tequilas, and craft spirits hand-picked by our team. McKinney, TX. Special orders welcome.">
+  
+  <meta property="og:title" content="Small-Batch Spirits &amp; Texas Whiskeys — Liquor Palace McKinney">
+  <meta property="og:description" content="Our spirits wall is hand-selected: small-batch bourbons, Texas whiskeys, sipping tequilas, and artisanal spirits in McKinney, TX.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://liquorpalacetx.com/spirits/">
+  <meta property="og:image" content="/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/liquor-palace-icon.svg" type="image/svg+xml">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap">
+
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main Navigation">
+        <a href="/" class="nav__logo" aria-label="Liquor Palace Home">
+          <img src="/liquor-palace-icon.svg" alt="Liquor Palace Shield Logo" class="nav__logo-img" width="44" height="44">
+          <span>Liquor Palace</span>
+        </a>
+        
+        <button class="nav__toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle navigation menu">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+        
+        <ul class="nav__links" id="primary-menu" role="list">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/beer/" class="nav__link">Beer</a></li>
+          <li><a href="/wine/" class="nav__link">Wine</a></li>
+          <li><a href="/spirits/" class="nav__link nav__link--active" aria-current="page">Spirits</a></li>
+          <li><a href="/contact/" class="nav__link">Find Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main id="main-content">
+    <section class="category-hero" aria-labelledby="category-title">
+      <div class="container">
+        <span class="badge">Small-Batch &amp; Rare</span>
+        <h1 id="category-title">Small-Batch Spirits &amp; Whiskeys</h1>
+        <hr class="gold-rule">
+        <p class="category-hero__intro">
+          This is where we really separate from the big boxes.
+        </p>
+      </div>
+    </section>
+    
+    <section class="category-content">
+      <div class="container">
+        <div class="category-content__body">
+          <p>
+            Our spirits wall is curated bottle by bottle. Rather than rows of mass-produced dust collectors, you'll find small-batch bourbons, standout Texas distilleries, 100% agave tequilas and mezcals crafted for sipping, aged rums, and aromatic botanical gins that bring classic cocktails to life.
+          </p>
+          <p>
+            We're not here to upsell you. Tell us what you like to drink neat, what cocktail you're mixing, or what occasion you're celebrating, and we will match you with an honest bottle that fits your taste and budget.
+          </p>
+          <p>
+            We also stock fine tobacco and cigar products to complement your selection.
+          </p>
+          
+          <div class="category-cta-box scroll-reveal reveal-on-scroll">
+            <h3>Searching for an allocated or specialty bottle?</h3>
+            <p>
+              Special orders are always welcome. If you have a specific label or bottle in mind that you don't see on the shelf, ask our staff. If it exists in distribution, we can probably get it for you.
+            </p>
+            <a href="/contact/" class="btn btn--primary">Request a Bottle</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <img src="/liquor-palace-icon.svg" alt="" class="site-footer__icon" width="32" height="32" loading="lazy">
+        <span>Liquor Palace</span>
+      </div>
+      <address class="site-footer__address">
+        5951 Alma Rd, McKinney, TX 75070 · Serving McKinney, Frisco, Allen &amp; Plano
+      </address>
+      <ul class="site-footer__nav" role="list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/beer/">Beer</a></li>
+        <li><a href="/wine/">Wine</a></li>
+        <li><a href="/spirits/">Spirits</a></li>
+        <li><a href="/contact/">Find Us</a></li>
+      </ul>
+      <p class="site-footer__legal">
+        Must be 21 years of age or older to purchase alcoholic beverages. Please drink responsibly.
+      </p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/scripts/nav.ts"></script>
+  <script type="module" src="/src/scripts/scroll-reveal.ts"></script>
+</body>
+</html>

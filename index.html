@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liquor Palace — Hand-Picked Craft Beer, Boutique Wine &amp; Small-Batch Spirits</title>
+  <meta name="description" content="Liquor Palace in McKinney, TX. We curate, they warehouse: hand-selected local craft beers, boutique wines, and small-batch spirits. Serving McKinney, Frisco, Allen, and Plano.">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Liquor Palace — Hand-Picked Craft Beer, Wine &amp; Spirits">
+  <meta property="og:description" content="We curate, they warehouse. Hand-selected inventory, staff recommendations, special orders, and event planning in McKinney, TX.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://liquorpalacetx.com/">
+  <meta property="og:image" content="/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/liquor-palace-icon.svg" type="image/svg+xml">
+  
+  <!-- Google Fonts: Playfair Display & Inter with display=swap and preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/src/styles/main.css">
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LiquorStore",
+    "name": "Liquor Palace",
+    "image": "https://liquorpalacetx.com/og-image.svg",
+    "description": "Retailer of hand-selected craft beer, boutique wine, small-batch spirits, and tobacco products. Serving McKinney, Frisco, Allen, and Plano.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "5951 Alma Rd",
+      "addressLocality": "McKinney",
+      "addressRegion": "TX",
+      "postalCode": "75070",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.1721,
+      "longitude": -96.6985
+    },
+    "areaServed": [
+      { "@type": "City", "name": "McKinney" },
+      { "@type": "City", "name": "Frisco" },
+      { "@type": "City", "name": "Allen" },
+      { "@type": "City", "name": "Plano" }
+    ],
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body>
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Logo Reveal Splash Screen (Plays once on load, respects reduced motion) -->
+  <div class="splash" aria-hidden="true">
+    <img src="/liquor-palace-icon.svg" alt="" class="splash__logo" width="130" height="130" fetchpriority="high">
+  </div>
+  
+  <!-- Site Header & Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main Navigation">
+        <a href="/" class="nav__logo" aria-label="Liquor Palace Home">
+          <img src="/liquor-palace-icon.svg" alt="Liquor Palace Shield Logo" class="nav__logo-img" width="44" height="44">
+          <span>Liquor Palace</span>
+        </a>
+        
+        <button class="nav__toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle navigation menu">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+        
+        <ul class="nav__links" id="primary-menu" role="list">
+          <li><a href="/" class="nav__link nav__link--active" aria-current="page">Home</a></li>
+          <li><a href="/beer/" class="nav__link">Beer</a></li>
+          <li><a href="/wine/" class="nav__link">Wine</a></li>
+          <li><a href="/spirits/" class="nav__link">Spirits</a></li>
+          <li><a href="/contact/" class="nav__link">Find Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <span class="badge">McKinney, Texas</span>
+        <h1 id="hero-title">Hand-picked.<br>Staff-recommended.<br>Stocked for McKinney.</h1>
+        <hr class="gold-rule">
+        <p class="hero__subtitle">
+          We curate, they warehouse. From local Texas craft brews and small-batch bourbons to boutique wines for any budget, we stock what the big-box retailers overlook.
+        </p>
+        <div class="hero__actions">
+          <a href="/contact/" class="btn btn--primary">Visit Store on Alma Rd</a>
+          <a href="/spirits/" class="btn btn--outline">Explore Our Selection</a>
+        </div>
+        <div class="hero__meta">
+          <span>5951 Alma Rd</span>
+          <span class="hero__meta-bullet" aria-hidden="true">◆</span>
+          <span>McKinney, TX 75070</span>
+          <span class="hero__meta-bullet" aria-hidden="true">◆</span>
+          <span>Serving McKinney, Frisco, Allen &amp; Plano</span>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Differentiator Bands (Stacked vertical rhythm, alternating navy/deep-navy) -->
+    <section class="differentiators" aria-label="Why Choose Liquor Palace">
+      <article class="differentiator differentiator--alt scroll-reveal reveal-on-scroll">
+        <div class="container differentiator__inner">
+          <div class="differentiator__rule" aria-hidden="true"></div>
+          <div class="differentiator__content">
+            <h2 class="differentiator__title">We curate, they warehouse.</h2>
+            <p class="differentiator__text">
+              Big-box stores carry everything but know nothing about it. We hand-select our inventory—especially local craft beers, small-batch spirits, and boutique wines—and our staff can actually recommend a pairing or a bottle for your budget.
+            </p>
+          </div>
+        </div>
+      </article>
+      
+      <article class="differentiator scroll-reveal reveal-on-scroll">
+        <div class="container differentiator__inner">
+          <div class="differentiator__rule" aria-hidden="true"></div>
+          <div class="differentiator__content">
+            <h2 class="differentiator__title">If we don't carry it, we'll get it.</h2>
+            <p class="differentiator__text">
+              We take special orders and listen to customer requests. Looking for an allocated whiskey, a seasonal cider, or a specific regional vintage? Tell us what you want and we'll track it down. The big guys won't do that.
+            </p>
+          </div>
+        </div>
+      </article>
+      
+      <article class="differentiator differentiator--alt scroll-reveal reveal-on-scroll">
+        <div class="container differentiator__inner">
+          <div class="differentiator__rule" aria-hidden="true"></div>
+          <div class="differentiator__content">
+            <h2 class="differentiator__title">We support your events.</h2>
+            <p class="differentiator__text">
+              Need a keg for a backyard gathering, a curated case for a wedding, or a rare celebration bottle? We help you calculate quantities, select flavor profiles, and plan your order—not just ring it up.
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+    
+    <!-- Category Shelf Section (Back-lit boutique shelves) -->
+    <section class="shelf" aria-labelledby="shelf-heading">
+      <div class="container">
+        <div class="shelf__header scroll-reveal reveal-on-scroll">
+          <h2 id="shelf-heading">The Palace Collection</h2>
+          <hr class="gold-rule gold-rule--center">
+          <p class="shelf__intro">
+            Every bottle and can on our shelves was chosen with intention. Step into our store to find your next favorite pour.
+          </p>
+        </div>
+        
+        <div class="shelf__grid">
+          <a href="/beer/" class="shelf__slot scroll-reveal reveal-on-scroll">
+            <span class="shelf__slot-tag">Craft &amp; Imports</span>
+            <div>
+              <h3 class="shelf__slot-title">Beer</h3>
+              <p class="shelf__slot-desc">Fresh Texas craft IPAs, stouts, ciders, and European classics you won't find on warehouse pallets.</p>
+            </div>
+            <span class="shelf__slot-arrow">Browse Beer <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          
+          <a href="/wine/" class="shelf__slot scroll-reveal reveal-on-scroll">
+            <span class="shelf__slot-tag">Boutique &amp; Everyday</span>
+            <div>
+              <h3 class="shelf__slot-title">Wine</h3>
+              <p class="shelf__slot-desc">Tasted and vetted vintages. Honest bottles under twenty dollars up to cellar-worthy reserve bottles.</p>
+            </div>
+            <span class="shelf__slot-arrow">Browse Wine <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          
+          <a href="/spirits/" class="shelf__slot scroll-reveal reveal-on-scroll">
+            <span class="shelf__slot-tag">Small-Batch &amp; Rare</span>
+            <div>
+              <h3 class="shelf__slot-title">Spirits</h3>
+              <p class="shelf__slot-desc">Texas bourbons, artisanal tequilas, sipping rums, and distinct botanical gins for discerning palates.</p>
+            </div>
+            <span class="shelf__slot-arrow">Browse Spirits <span aria-hidden="true">&rarr;</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Location & Visit Section -->
+    <section class="location" aria-labelledby="visit-heading">
+      <div class="container location__inner">
+        <div class="location__info scroll-reveal reveal-on-scroll">
+          <h2 id="visit-heading">Visit Us on Alma Road</h2>
+          <hr class="gold-rule">
+          <address>
+            <strong>Liquor Palace</strong><br>
+            5951 Alma Rd<br>
+            McKinney, TX 75070
+          </address>
+          
+          <ul class="location__meta-list">
+            <li class="location__meta-item">
+              <span class="location__meta-label">Phone:</span>
+              <!-- TODO: Confirm phone number -->
+              <span class="contact-note">TODO: Confirm phone number</span>
+            </li>
+            <li class="location__meta-item">
+              <span class="location__meta-label">Hours:</span>
+              <!-- TODO: Confirm store hours -->
+              <span class="contact-note">TODO: Confirm store hours (Mon-Sat 10am-9pm typical in TX)</span>
+            </li>
+            <li class="location__meta-item">
+              <span class="location__meta-label">Selection:</span>
+              <span>Beer, Wine, Spirits, Tobacco Products &amp; Special Orders</span>
+            </li>
+          </ul>
+          
+          <p class="location__area">
+            Conveniently located for patrons across McKinney, Frisco, Allen, Plano, and surrounding Collin County communities.
+          </p>
+          
+          <div style="margin-top: 1.75rem;">
+            <a href="https://maps.google.com/?q=5951+Alma+Rd,+McKinney,+TX+75070" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+              Open in Google Maps
+            </a>
+          </div>
+        </div>
+        
+        <div class="location__map-frame scroll-reveal reveal-on-scroll">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3341.0!2d-96.6985!3d33.1721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c15e4f0c1b3e5%3A0x0!2s5951+Alma+Rd%2C+McKinney%2C+TX+75070!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+            width="600" 
+            height="450" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade" 
+            title="Map of Liquor Palace at 5951 Alma Rd, McKinney, TX"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <img src="/liquor-palace-icon.svg" alt="" class="site-footer__icon" width="32" height="32" loading="lazy">
+        <span>Liquor Palace</span>
+      </div>
+      <address class="site-footer__address">
+        5951 Alma Rd, McKinney, TX 75070 · Serving McKinney, Frisco, Allen &amp; Plano
+      </address>
+      <ul class="site-footer__nav" role="list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/beer/">Beer</a></li>
+        <li><a href="/wine/">Wine</a></li>
+        <li><a href="/spirits/">Spirits</a></li>
+        <li><a href="/contact/">Find Us</a></li>
+      </ul>
+      <p class="site-footer__legal">
+        Must be 21 years of age or older to purchase alcoholic beverages. Please drink responsibly.
+      </p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/scripts/nav.ts"></script>
+  <script type="module" src="/src/scripts/scroll-reveal.ts"></script>
+</body>
+</html>
