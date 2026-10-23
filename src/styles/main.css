@@ -174,26 +174,45 @@ a:hover {
   justify-content: center;
   z-index: 9999;
   pointer-events: none;
-  animation: splashFade 1.35s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation: splashFade 2.35s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.splash__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  animation: splashLogo 2.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .splash__logo {
-  width: 130px;
-  height: 130px;
-  animation: splashLogo 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  filter: drop-shadow(0 4px 20px rgba(8, 32, 65, 0.15));
+  width: 140px;
+  height: 140px;
+  filter: drop-shadow(0 6px 24px rgba(8, 32, 65, 0.18));
+}
+
+.splash__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 2px 10px rgba(196, 147, 38, 0.2);
 }
 
 @keyframes splashLogo {
   0% {
     opacity: 0;
-    transform: scale(0.75);
+    transform: scale(0.8);
   }
-  30% {
+  20% {
     opacity: 1;
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
-  65% {
+  75% {
     opacity: 1;
     transform: scale(1);
   }
@@ -204,7 +223,7 @@ a:hover {
 }
 
 @keyframes splashFade {
-  0%, 70% {
+  0%, 78% {
     opacity: 1;
     visibility: visible;
   }
