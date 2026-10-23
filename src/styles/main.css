@@ -174,7 +174,7 @@ a:hover {
   justify-content: center;
   z-index: 9999;
   pointer-events: none;
-  animation: splashFade 2.35s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation: splashFade 2.00s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
 .splash__inner {
@@ -182,14 +182,14 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.25rem;
-  animation: splashLogo 2.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  gap: 1.5rem;
+  animation: splashLogo 2.00s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .splash__logo {
-  width: 140px;
-  height: 140px;
-  filter: drop-shadow(0 6px 24px rgba(8, 32, 65, 0.18));
+  width: 190px;
+  height: 190px;
+  filter: drop-shadow(0 8px 28px rgba(8, 32, 65, 0.2));
 }
 
 .splash__title {
@@ -206,13 +206,13 @@ a:hover {
 @keyframes splashLogo {
   0% {
     opacity: 0;
-    transform: scale(0.8);
+    transform: scale(0.85);
   }
   20% {
     opacity: 1;
     transform: scale(1.02);
   }
-  75% {
+  74% {
     opacity: 1;
     transform: scale(1);
   }
@@ -223,7 +223,7 @@ a:hover {
 }
 
 @keyframes splashFade {
-  0%, 78% {
+  0%, 75% {
     opacity: 1;
     visibility: visible;
   }
@@ -995,6 +995,127 @@ a:hover {
   height: clamp(260px, 35vw, 420px);
   object-fit: cover;
   display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Beer Staples & Cooler Favorites
+   -------------------------------------------------------------------------- */
+.staples-section {
+  margin-top: 3.5rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.staples-header {
+  margin-bottom: 2rem;
+}
+
+.staples-header h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--color-navy);
+}
+
+.staples-header p {
+  color: var(--color-body-muted);
+  font-size: 1.05rem;
+  max-width: 640px;
+  margin-top: 0.5rem;
+}
+
+.staples-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .staples-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .staples-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.staple-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 1.75rem 1.5rem;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.staple-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--color-gold);
+  opacity: 0.4;
+  transition: opacity var(--transition-fast);
+}
+
+.staple-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-md);
+}
+
+.staple-card:hover::before {
+  opacity: 1;
+}
+
+.staple-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.staple-name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+}
+
+.staple-desc {
+  font-size: 0.95rem;
+  color: var(--color-body-text);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+
+.staple-format {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-body-muted);
+  border-top: 1px solid var(--color-border);
+  padding-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.staple-format::before {
+  content: '•';
+  color: var(--color-gold);
+  font-size: 1.1rem;
 }
 
 /* --------------------------------------------------------------------------
