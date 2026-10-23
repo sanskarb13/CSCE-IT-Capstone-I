@@ -52,6 +52,14 @@
       { "@type": "City", "name": "Allen" },
       { "@type": "City", "name": "Plano" }
     ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "10:00",
+        "closes": "21:00"
+      }
+    ],
     "priceRange": "$$"
   }
   </script>
@@ -210,14 +218,16 @@
           
           <ul class="location__meta-list">
             <li class="location__meta-item">
-              <span class="location__meta-label">Phone:</span>
-              <!-- TODO: Confirm phone number -->
-              <span class="contact-note">TODO: Confirm phone number</span>
+              <span class="location__meta-label">Hours:</span>
+              <span>Mon – Sat: 10:00 AM – 9:00 PM<br><span style="color: var(--color-body-muted);">Sunday: Closed</span></span>
             </li>
             <li class="location__meta-item">
-              <span class="location__meta-label">Hours:</span>
-              <!-- TODO: Confirm store hours -->
-              <span class="contact-note">TODO: Confirm store hours (Mon-Sat 10am-9pm typical in TX)</span>
+              <span class="location__meta-label">Phone:</span>
+              <span>TBD</span>
+            </li>
+            <li class="location__meta-item">
+              <span class="location__meta-label">Email:</span>
+              <span>TBD</span>
             </li>
             <li class="location__meta-item">
               <span class="location__meta-label">Selection:</span>

@@ -1,23 +1,35 @@
 /* ==========================================================================
    Liquor Palace — Primary Stylesheet
-   Design Concept: "The Back-Lit Shelf"
-   Palette: Navy (#082041), Deep Navy (#0A2A54), Gold (#D3A538), 
-            Red (#A81D20), Cream (#F5F0E8), White (#FEFEFD)
+   Design Concept: "The Curated Cellar" (Creamy White Palette)
+   Palette: Warm Cream (#FAF7F2), Soft Linen (#F4EFE6), Surface White (#FFFFFF),
+            Deep Navy (#082041), Rich Gold (#C49326), Accent Red (#A81D20),
+            Slate Body Text (#232B38)
    ========================================================================== */
 
 :root {
-  --color-navy: #082041;
-  --color-navy-dark: #051429;
-  --color-deep-navy: #0A2A54;
-  --color-surface: #0e2f5c;
-  --color-cream: #F5F0E8;
-  --color-cream-muted: #d8d0c2;
-  --color-gold: #D3A538;
-  --color-gold-hover: #e5b948;
-  --color-gold-dim: rgba(211, 165, 56, 0.2);
-  --color-red: #A81D20;
-  --color-red-hover: #bf2326;
+  --color-cream: #FAF7F2;          /* Primary body & page background */
+  --color-cream-soft: #F4EFE6;     /* Secondary warm cream for alternating sections */
+  --color-surface: #FFFFFF;        /* Card & surface background */
+  --color-surface-hover: #FCFAF7;
+  
+  --color-navy: #082041;           /* Primary brand navy: headings, logo, accents */
+  --color-navy-dark: #051429;      /* Darkest navy: footer background */
+  --color-deep-navy: #0F2D54;      /* Deep navy for high-contrast elements */
+  
+  --color-body-text: #232B38;      /* Primary readable dark slate text */
+  --color-body-muted: #5C6779;     /* Secondary muted text */
+  
+  --color-gold: #C49326;           /* Brand warm metallic gold accent */
+  --color-gold-hover: #D4A336;     /* Brighter gold on hover */
+  --color-gold-dim: rgba(196, 147, 38, 0.25);
+  --color-gold-bg: rgba(196, 147, 38, 0.08);
+  
+  --color-red: #A81D20;            /* Brand red accent: badges, tags */
+  --color-red-hover: #BF2326;
   --color-white: #FEFEFD;
+  
+  --color-border: rgba(8, 32, 65, 0.12);
+  --color-border-card: rgba(8, 32, 65, 0.08);
   
   --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -27,6 +39,9 @@
   --radius-sm: 4px;
   --radius-md: 8px;
   --transition-smooth: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-sm: 0 2px 8px rgba(8, 32, 65, 0.04);
+  --shadow-md: 0 8px 24px rgba(8, 32, 65, 0.08);
+  --shadow-lg: 0 16px 36px rgba(8, 32, 65, 0.12);
 }
 
 /* --------------------------------------------------------------------------
@@ -40,8 +55,8 @@
 
 html {
   font-family: var(--font-body);
-  background-color: var(--color-navy);
-  color: var(--color-cream);
+  background-color: var(--color-cream);
+  color: var(--color-body-text);
   font-size: 16px;
   line-height: 1.6;
   scroll-behavior: smooth;
@@ -64,8 +79,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--color-navy);
-  color: var(--color-cream);
+  background-color: var(--color-cream);
+  color: var(--color-body-text);
   overflow-x: hidden;
   font-size-adjust: from-font;
 }
@@ -75,7 +90,7 @@ body {
    -------------------------------------------------------------------------- */
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  color: var(--color-white);
+  color: var(--color-navy);
   font-weight: 700;
   line-height: 1.18;
   letter-spacing: -0.01em;
@@ -95,19 +110,19 @@ h3 {
 
 p {
   margin-bottom: 1.25rem;
-  color: var(--color-cream);
+  color: var(--color-body-text);
   font-size: clamp(1rem, 1.2vw, 1.125rem);
   line-height: 1.7;
 }
 
 a {
-  color: var(--color-gold);
+  color: var(--color-navy);
   text-decoration: none;
   transition: color var(--transition-smooth);
 }
 
 a:hover {
-  color: var(--color-gold-hover);
+  color: var(--color-gold);
 }
 
 /* --------------------------------------------------------------------------
@@ -153,7 +168,7 @@ a:hover {
 .splash {
   position: fixed;
   inset: 0;
-  background-color: var(--color-navy);
+  background-color: var(--color-cream);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -166,7 +181,7 @@ a:hover {
   width: 130px;
   height: 130px;
   animation: splashLogo 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  filter: drop-shadow(0 0 25px rgba(211, 165, 56, 0.35));
+  filter: drop-shadow(0 4px 20px rgba(8, 32, 65, 0.15));
 }
 
 @keyframes splashLogo {
@@ -211,10 +226,10 @@ a:hover {
 .site-header {
   position: sticky;
   top: 0;
-  background-color: rgba(8, 32, 65, 0.94);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--color-gold-dim);
+  background-color: rgba(250, 247, 242, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
   z-index: 500;
   transition: padding var(--transition-smooth), background-color var(--transition-smooth);
 }
@@ -236,7 +251,7 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  color: var(--color-white);
+  color: var(--color-navy);
   font-family: var(--font-display);
   font-size: 1.35rem;
   font-weight: 700;
@@ -262,9 +277,9 @@ a:hover {
 }
 
 .nav__link {
-  color: var(--color-cream);
+  color: var(--color-navy);
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 0.4rem 0;
@@ -295,14 +310,14 @@ a:hover {
 
 .nav__link--active {
   color: var(--color-gold);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* Mobile Toggle */
 .nav__toggle {
   display: none;
-  background: transparent;
-  border: 1px solid var(--color-gold-dim);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   padding: 0.6rem;
   cursor: pointer;
@@ -321,7 +336,7 @@ a:hover {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: var(--color-gold);
+  background-color: var(--color-navy);
   transition: transform 0.25s ease, opacity 0.25s ease;
   transform-origin: center;
 }
@@ -337,7 +352,7 @@ a:hover {
     top: var(--nav-height);
     left: 0;
     right: 0;
-    background-color: rgba(8, 32, 65, 0.98);
+    background-color: rgba(250, 247, 242, 0.98);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 2px solid var(--color-gold);
@@ -348,7 +363,7 @@ a:hover {
     opacity: 0;
     visibility: hidden;
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, visibility 0.3s;
-    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--shadow-lg);
   }
   
   .nav__links--open {
@@ -425,19 +440,20 @@ a:hover {
   background-color: var(--color-gold-hover);
   color: var(--color-navy-dark);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(211, 165, 56, 0.35);
+  box-shadow: 0 6px 18px rgba(196, 147, 38, 0.35);
 }
 
 .btn--outline {
   background-color: transparent;
-  color: var(--color-gold);
-  border: 1px solid var(--color-gold);
+  color: var(--color-navy);
+  border: 1.5px solid var(--color-navy);
 }
 
 .btn--outline:hover {
-  background-color: var(--color-gold);
-  color: var(--color-navy-dark);
+  background-color: var(--color-navy);
+  color: var(--color-white);
   transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
 .badge {
@@ -448,7 +464,7 @@ a:hover {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 0.25rem 0.65rem;
+  padding: 0.28rem 0.75rem;
   border-radius: var(--radius-sm);
   margin-bottom: 1rem;
 }
@@ -458,17 +474,21 @@ a:hover {
    -------------------------------------------------------------------------- */
 .hero {
   padding: clamp(3.5rem, 8vw, 6.5rem) 0 clamp(3rem, 6vw, 5rem);
-  background: radial-gradient(circle at 80% 20%, rgba(10, 42, 84, 0.8) 0%, rgba(8, 32, 65, 1) 70%);
-  border-bottom: 1px solid var(--color-gold-dim);
+  background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-cream-soft) 100%);
+  border-bottom: 1px solid var(--color-border);
   position: relative;
+}
+
+.hero h1 {
+  color: var(--color-navy);
 }
 
 .hero__subtitle {
   font-size: clamp(1.15rem, 2vw, 1.4rem);
-  color: var(--color-cream);
-  max-width: 620px;
+  color: var(--color-body-text);
+  max-width: 640px;
   margin-bottom: 2.25rem;
-  opacity: 0.95;
+  line-height: 1.65;
 }
 
 .hero__actions {
@@ -484,7 +504,7 @@ a:hover {
   align-items: center;
   gap: 0.75rem;
   font-size: 0.95rem;
-  color: var(--color-cream-muted);
+  color: var(--color-body-muted);
 }
 
 .hero__meta-bullet {
@@ -495,16 +515,17 @@ a:hover {
    Differentiators Section ("We curate, they warehouse")
    -------------------------------------------------------------------------- */
 .differentiators {
-  border-bottom: 1px solid var(--color-gold-dim);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .differentiator {
   padding: clamp(3rem, 6vw, 4.5rem) 0;
+  background-color: var(--color-cream);
   transition: background-color var(--transition-smooth);
 }
 
 .differentiator--alt {
-  background-color: var(--color-deep-navy);
+  background-color: var(--color-cream-soft);
 }
 
 .differentiator__inner {
@@ -522,12 +543,13 @@ a:hover {
 
 .differentiator__title {
   margin-bottom: 0.75rem;
+  color: var(--color-navy);
 }
 
 .differentiator__text {
   max-width: 760px;
   margin-bottom: 0;
-  color: var(--color-cream);
+  color: var(--color-body-text);
   font-size: clamp(1.05rem, 1.3vw, 1.2rem);
 }
 
@@ -536,8 +558,8 @@ a:hover {
    -------------------------------------------------------------------------- */
 .shelf {
   padding: clamp(3.5rem, 7vw, 5.5rem) 0;
-  background-color: var(--color-navy);
-  border-bottom: 1px solid var(--color-gold-dim);
+  background-color: var(--color-cream-soft);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .shelf__header {
@@ -549,7 +571,7 @@ a:hover {
   max-width: 580px;
   margin-left: auto;
   margin-right: auto;
-  color: var(--color-cream-muted);
+  color: var(--color-body-muted);
 }
 
 .shelf__grid {
@@ -570,13 +592,14 @@ a:hover {
   flex-direction: column;
   justify-content: space-between;
   padding: clamp(2rem, 3.5vw, 2.75rem);
-  background-color: var(--color-deep-navy);
-  border: 1px solid var(--color-gold-dim);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-card);
   border-radius: var(--radius-sm);
-  color: var(--color-white);
+  color: var(--color-body-text);
   min-height: 220px;
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
   transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 
@@ -596,8 +619,8 @@ a:hover {
 .shelf__slot:hover {
   transform: translateY(-4px);
   border-color: var(--color-gold);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4), 0 0 15px rgba(211, 165, 56, 0.15);
-  color: var(--color-white);
+  box-shadow: var(--shadow-md);
+  color: var(--color-body-text);
 }
 
 .shelf__slot:hover::before {
@@ -616,12 +639,12 @@ a:hover {
   font-family: var(--font-display);
   font-size: 2.2rem;
   margin: 0.75rem 0 0.5rem;
-  color: var(--color-white);
+  color: var(--color-navy);
 }
 
 .shelf__slot-desc {
   font-size: 0.95rem;
-  color: var(--color-cream-muted);
+  color: var(--color-body-muted);
   margin-bottom: 1.25rem;
 }
 
@@ -646,8 +669,8 @@ a:hover {
    -------------------------------------------------------------------------- */
 .location {
   padding: clamp(3.5rem, 7vw, 5.5rem) 0;
-  background-color: var(--color-deep-navy);
-  border-bottom: 1px solid var(--color-gold-dim);
+  background-color: var(--color-cream);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .location__inner {
@@ -667,7 +690,7 @@ a:hover {
   font-style: normal;
   font-size: 1.15rem;
   line-height: 1.6;
-  color: var(--color-cream);
+  color: var(--color-body-text);
   margin-bottom: 1.5rem;
 }
 
@@ -676,25 +699,26 @@ a:hover {
   margin: 1.5rem 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.85rem;
 }
 
 .location__meta-item {
   display: flex;
   gap: 0.75rem;
   font-size: 1rem;
+  align-items: flex-start;
 }
 
 .location__meta-label {
-  font-weight: 600;
-  color: var(--color-gold);
+  font-weight: 700;
+  color: var(--color-navy);
   min-width: 90px;
 }
 
 .location__area {
   margin-top: 1.5rem;
   font-size: 0.95rem;
-  color: var(--color-cream-muted);
+  color: var(--color-body-muted);
   border-left: 2px solid var(--color-gold);
   padding-left: 1rem;
 }
@@ -702,10 +726,11 @@ a:hover {
 .location__map-frame {
   border-radius: var(--radius-sm);
   overflow: hidden;
-  border: 1px solid var(--color-gold-dim);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
   aspect-ratio: 4 / 3;
   width: 100%;
+  background: var(--color-surface);
 }
 
 .location__map-frame iframe {
@@ -720,19 +745,24 @@ a:hover {
    -------------------------------------------------------------------------- */
 .category-hero {
   padding: clamp(3.5rem, 7vw, 5rem) 0 2.5rem;
-  background: radial-gradient(circle at 50% 0%, var(--color-deep-navy) 0%, var(--color-navy) 80%);
-  border-bottom: 1px solid var(--color-gold-dim);
+  background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-cream-soft) 100%);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.category-hero h1 {
+  color: var(--color-navy);
 }
 
 .category-hero__intro {
   font-size: clamp(1.2rem, 2vw, 1.5rem);
-  color: var(--color-cream);
+  color: var(--color-body-text);
   max-width: 720px;
   margin-top: 1rem;
 }
 
 .category-content {
   padding: clamp(3rem, 6vw, 4.5rem) 0;
+  background-color: var(--color-cream);
 }
 
 .category-content__body {
@@ -742,19 +772,22 @@ a:hover {
 .category-content__body p {
   font-size: 1.15rem;
   margin-bottom: 1.75rem;
+  color: var(--color-body-text);
 }
 
 .category-cta-box {
   margin-top: 3rem;
   padding: 2.25rem;
-  background-color: var(--color-deep-navy);
-  border: 1px solid var(--color-gold-dim);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-left: 4px solid var(--color-gold);
   border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
 }
 
 .category-cta-box h3 {
   margin-bottom: 0.5rem;
+  color: var(--color-navy);
 }
 
 /* --------------------------------------------------------------------------
@@ -774,14 +807,16 @@ a:hover {
 }
 
 .contact-card {
-  background-color: var(--color-deep-navy);
-  border: 1px solid var(--color-gold-dim);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .contact-card h2 {
   margin-bottom: 1.5rem;
+  color: var(--color-navy);
 }
 
 .contact-list {
@@ -793,30 +828,32 @@ a:hover {
 
 .contact-item h3 {
   font-size: 1.1rem;
-  color: var(--color-gold);
+  color: var(--color-navy);
   margin-bottom: 0.35rem;
   font-family: var(--font-body);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  font-weight: 700;
 }
 
 .contact-note {
   display: inline-block;
-  background-color: rgba(168, 29, 32, 0.18);
-  border: 1px dashed var(--color-red);
-  color: #ff999b;
-  padding: 0.35rem 0.65rem;
+  background-color: rgba(168, 29, 32, 0.08);
+  border: 1px solid rgba(168, 29, 32, 0.25);
+  color: var(--color-red);
+  padding: 0.25rem 0.6rem;
   font-size: 0.85rem;
   border-radius: var(--radius-sm);
+  font-weight: 600;
 }
 
 /* --------------------------------------------------------------------------
-   Footer
+   Footer (Grounded Navy Anchor)
    -------------------------------------------------------------------------- */
 .site-footer {
   margin-top: auto;
-  background-color: var(--color-navy-dark);
-  border-top: 1px solid var(--color-gold-dim);
+  background-color: var(--color-navy);
+  border-top: 1px solid var(--color-border);
   padding: 3rem 0 2.5rem;
 }
 
@@ -844,8 +881,9 @@ a:hover {
 
 .site-footer__address {
   font-style: normal;
-  color: var(--color-cream-muted);
+  color: var(--color-cream);
   font-size: 0.95rem;
+  opacity: 0.9;
 }
 
 .site-footer__nav {
@@ -858,20 +896,22 @@ a:hover {
 }
 
 .site-footer__nav a {
-  color: var(--color-cream-muted);
+  color: var(--color-cream);
   font-size: 0.85rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  opacity: 0.85;
 }
 
 .site-footer__nav a:hover {
   color: var(--color-gold);
+  opacity: 1;
 }
 
 .site-footer__legal {
-  color: var(--color-cream-muted);
+  color: var(--color-cream);
   font-size: 0.8rem;
-  opacity: 0.75;
+  opacity: 0.65;
   margin-bottom: 0;
 }
 

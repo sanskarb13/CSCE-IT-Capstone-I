@@ -45,6 +45,14 @@
       { "@type": "City", "name": "Frisco" },
       { "@type": "City", "name": "Allen" },
       { "@type": "City", "name": "Plano" }
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "10:00",
+        "closes": "21:00"
+      }
     ]
   }
   </script>
@@ -98,7 +106,7 @@
             <ul class="contact-list">
               <li class="contact-item">
                 <h3>Location</h3>
-                <address style="font-style: normal; color: var(--color-cream); line-height: 1.6;">
+                <address style="font-style: normal; color: var(--color-body-text); line-height: 1.6;">
                   <strong>Liquor Palace</strong><br>
                   5951 Alma Rd<br>
                   McKinney, TX 75070
@@ -107,25 +115,31 @@
               
               <li class="contact-item">
                 <h3>Store Hours</h3>
-                <!-- TODO: Confirm store hours -->
-                <p style="margin-bottom: 0.35rem;">
-                  <span class="contact-note">TODO: Confirm store hours</span>
+                <p style="margin-bottom: 0.35rem; font-size: 1.05rem; font-weight: 600; color: var(--color-body-text);">
+                  Monday – Saturday: 10:00 AM – 9:00 PM<br>
+                  <span style="color: var(--color-body-muted); font-weight: 500;">Sunday: Closed</span>
                 </p>
-                <small style="color: var(--color-cream-muted);">Standard Texas retail liquor hours: Monday – Saturday 10:00 AM – 9:00 PM (Closed Sundays).</small>
               </li>
               
               <li class="contact-item">
                 <h3>Phone &amp; Orders</h3>
-                <!-- TODO: Confirm phone number -->
-                <p style="margin-bottom: 0.35rem;">
-                  <span class="contact-note">TODO: Confirm phone number</span>
+                <p style="margin-bottom: 0.35rem; font-size: 1.05rem; color: var(--color-body-text);">
+                  TBD
                 </p>
-                <small style="color: var(--color-cream-muted);">Call during store hours for stock checks and curbside holds.</small>
+                <small style="color: var(--color-body-muted);">Call during store hours for stock checks and curbside holds.</small>
+              </li>
+
+              <li class="contact-item">
+                <h3>Email</h3>
+                <p style="margin-bottom: 0.35rem; font-size: 1.05rem; color: var(--color-body-text);">
+                  TBD
+                </p>
+                <small style="color: var(--color-body-muted);">For event planning, case orders, and customer requests.</small>
               </li>
               
               <li class="contact-item">
                 <h3>Service Areas</h3>
-                <p style="margin-bottom: 0;">Serving patrons across McKinney, Frisco, Allen, Plano, and surrounding Collin County neighborhoods.</p>
+                <p style="margin-bottom: 0; color: var(--color-body-text);">Serving patrons across McKinney, Frisco, Allen, Plano, and surrounding Collin County neighborhoods.</p>
               </li>
             </ul>
             
