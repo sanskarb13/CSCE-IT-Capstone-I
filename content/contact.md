@@ -1,6 +1,6 @@
 ---
 title: "Find Us — Liquor Palace"
-description: "Visit Liquor Palace at 5951 Alma Rd, McKinney, TX 75070. Serving McKinney, Frisco, Allen, Plano and surrounding areas."
+description: "Visit Liquor Palace at 5951 Alma Rd, McKinney, TX 75070. Directions, special orders, and event planning."
 ---
 
 # Find us on Alma Road.
@@ -15,5 +15,3 @@ McKinney, TX 75070
 
 **Phone:** TBD
 **Email:** TBD
-
-Serving McKinney, Frisco, Allen, Plano, and the surrounding areas.

@@ -50,12 +50,13 @@
   </header>
   
   <main id="main-content">
-    <section class="category-hero" aria-labelledby="category-title">
-      <div class="container">
+    <section class="category-hero hero--has-bg" aria-labelledby="category-title" style="padding: clamp(4rem, 7vw, 5.5rem) 0 clamp(3.5rem, 6vw, 4.5rem);">
+      <div class="hero__bg" style="background-image: url('/images/beer.jpg');" aria-hidden="true"></div>
+      <div class="container hero__content">
         <span class="badge">Curated Inventory</span>
-        <h1 id="category-title">Craft Beer &amp; Imports</h1>
+        <h1 id="category-title">Craft Beer &amp; <span class="gold italic">Imports</span></h1>
         <hr class="gold-rule">
-        <p class="category-hero__intro">
+        <p class="category-hero__intro" style="color: var(--color-cream); max-width: 680px;">
           We pick every can, every bottle, every six-pack on these shelves.
         </p>
       </div>
@@ -63,6 +64,10 @@
     
     <section class="category-content">
       <div class="container">
+        <div class="category-banner scroll-reveal reveal-on-scroll">
+          <img src="/images/beer.jpg" alt="Poured craft beer glasses and cans" loading="lazy" width="1000" height="400">
+        </div>
+
         <div class="category-content__body">
           <p>
             Our craft selection leans local — Texas breweries first, regional favorites second, and the imports that are actually worth the trip. We skip the generic warehouse filler and focus on breweries doing honest, exciting work.

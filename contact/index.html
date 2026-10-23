@@ -86,12 +86,13 @@
   </header>
   
   <main id="main-content">
-    <section class="category-hero" aria-labelledby="category-title">
-      <div class="container">
-        <span class="badge">Visit &amp; Contact</span>
-        <h1 id="category-title">Find Us on Alma Road</h1>
+    <section class="category-hero hero--has-bg" aria-labelledby="category-title" style="padding: clamp(4rem, 7vw, 5.5rem) 0 clamp(3.5rem, 6vw, 4.5rem);">
+      <div class="hero__bg" style="background-image: url('/images/store.jpg');" aria-hidden="true"></div>
+      <div class="container hero__content">
+        <span class="badge">Visit Our Store</span>
+        <h1 id="category-title">Find Us on <span class="gold italic">Alma Road</span></h1>
         <hr class="gold-rule">
-        <p class="category-hero__intro">
+        <p class="category-hero__intro" style="color: var(--color-cream); max-width: 620px;">
           Stop by our retail store or contact our staff for special orders, keg requests, and event case planning.
         </p>
       </div>
@@ -102,6 +103,7 @@
         <div class="contact-grid">
           <!-- Left: Store Details -->
           <div class="contact-card scroll-reveal reveal-on-scroll">
+            <div class="find-us-photo" style="background-image: url('/images/store.jpg');" role="img" aria-label="Liquor Palace store interior"></div>
             <h2>Store Information</h2>
             <ul class="contact-list">
               <li class="contact-item">
@@ -136,11 +138,6 @@
                 </p>
                 <small style="color: var(--color-body-muted);">For event planning, case orders, and customer requests.</small>
               </li>
-              
-              <li class="contact-item">
-                <h3>Service Areas</h3>
-                <p style="margin-bottom: 0; color: var(--color-body-text);">Serving patrons across McKinney, Frisco, Allen, Plano, and surrounding Collin County neighborhoods.</p>
-              </li>
             </ul>
             
             <div style="margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem;">
@@ -174,7 +171,7 @@
         <span>Liquor Palace</span>
       </div>
       <address class="site-footer__address">
-        5951 Alma Rd, McKinney, TX 75070 · Serving McKinney, Frisco, Allen &amp; Plano
+        5951 Alma Rd, McKinney, TX 75070
       </address>
       <ul class="site-footer__nav" role="list">
         <li><a href="/">Home</a></li>

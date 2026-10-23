@@ -100,25 +100,42 @@
   </header>
   
   <main id="main-content">
-    <!-- Hero Section -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container">
+    <!-- Hero Section with Atmospheric Photography -->
+    <section class="hero hero--has-bg" aria-labelledby="hero-title">
+      <div class="hero__bg" style="background-image: url('/images/hero.jpg');" aria-hidden="true"></div>
+      <div class="container hero__content">
         <span class="badge">McKinney, Texas</span>
-        <h1 id="hero-title">Hand-picked.<br>Staff-recommended.<br>Stocked for McKinney.</h1>
+        <h1 id="hero-title">Hand-picked.<br><span class="gold italic">Staff-recommended.</span><br>Stocked for McKinney.</h1>
         <hr class="gold-rule">
         <p class="hero__subtitle">
           We curate, they warehouse. From local Texas craft brews and small-batch bourbons to boutique wines for any budget, we stock what the big-box retailers overlook.
         </p>
         <div class="hero__actions">
           <a href="/contact/" class="btn btn--primary">Visit Store on Alma Rd</a>
-          <a href="/spirits/" class="btn btn--outline">Explore Our Selection</a>
+          <a href="/spirits/" class="btn btn--outline-light">Explore Our Selection</a>
         </div>
         <div class="hero__meta">
           <span>5951 Alma Rd</span>
           <span class="hero__meta-bullet" aria-hidden="true">◆</span>
           <span>McKinney, TX 75070</span>
-          <span class="hero__meta-bullet" aria-hidden="true">◆</span>
-          <span>Serving McKinney, Frisco, Allen &amp; Plano</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Editorial Split Showcase (Sip'Stroke inspired) -->
+    <section class="split-section" aria-label="Our Curation Philosophy">
+      <div class="container">
+        <div class="split-card scroll-reveal reveal-on-scroll">
+          <div class="split-card__img" style="background-image: url('/images/curate-split.jpg');" role="img" aria-label="Curated bottles on wood cellar shelves"></div>
+          <div class="split-card__body">
+            <span class="badge">The Palace Philosophy</span>
+            <h2>We curate, <span class="gold italic">they warehouse.</span></h2>
+            <p>Big-box stores carry everything but know nothing about it. We hand-select our inventory—especially local Texas craft beers, small-batch spirits, and boutique wines—and our staff can actually recommend a pairing or a bottle for your budget.</p>
+            <p>Need an allocated bourbon, a local cider, or a case for a celebration? If we don't carry it, we'll get it. We take special orders and listen to our customers.</p>
+            <div>
+              <a href="/contact/" class="btn btn--primary" style="margin-top: 0.5rem;">Visit Us or Request A Bottle</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -162,11 +179,11 @@
       </article>
     </section>
     
-    <!-- Category Shelf Section (Back-lit boutique shelves) -->
+    <!-- Category Shelf Section (with rich photography like Sip'Stroke) -->
     <section class="shelf" aria-labelledby="shelf-heading">
       <div class="container">
         <div class="shelf__header scroll-reveal reveal-on-scroll">
-          <h2 id="shelf-heading">The Palace Collection</h2>
+          <h2 id="shelf-heading">The Palace <span class="gold italic">Collection</span></h2>
           <hr class="gold-rule gold-rule--center">
           <p class="shelf__intro">
             Every bottle and can on our shelves was chosen with intention. Step into our store to find your next favorite pour.
@@ -175,30 +192,45 @@
         
         <div class="shelf__grid">
           <a href="/beer/" class="shelf__slot scroll-reveal reveal-on-scroll">
-            <span class="shelf__slot-tag">Craft &amp; Imports</span>
-            <div>
-              <h3 class="shelf__slot-title">Beer</h3>
-              <p class="shelf__slot-desc">Fresh Texas craft IPAs, stouts, ciders, and European classics you won't find on warehouse pallets.</p>
+            <div class="shelf__slot-media">
+              <img src="/images/beer.jpg" alt="Craft Beer selection" loading="lazy" width="400" height="250">
+              <span class="shelf__slot-badge">Texas Craft &amp; Imports</span>
             </div>
-            <span class="shelf__slot-arrow">Browse Beer <span aria-hidden="true">&rarr;</span></span>
+            <div class="shelf__slot-body">
+              <div>
+                <h3 class="shelf__slot-title">Beer</h3>
+                <p class="shelf__slot-desc">Fresh Texas craft IPAs, seasonal stouts, ciders, and European classics you won't find on warehouse pallets.</p>
+              </div>
+              <span class="shelf__slot-arrow">Browse Beer <span aria-hidden="true">&rarr;</span></span>
+            </div>
           </a>
           
           <a href="/wine/" class="shelf__slot scroll-reveal reveal-on-scroll">
-            <span class="shelf__slot-tag">Boutique &amp; Everyday</span>
-            <div>
-              <h3 class="shelf__slot-title">Wine</h3>
-              <p class="shelf__slot-desc">Tasted and vetted vintages. Honest bottles under twenty dollars up to cellar-worthy reserve bottles.</p>
+            <div class="shelf__slot-media">
+              <img src="/images/wine.jpg" alt="Boutique Wine selection" loading="lazy" width="400" height="250">
+              <span class="shelf__slot-badge">Boutique &amp; Everyday</span>
             </div>
-            <span class="shelf__slot-arrow">Browse Wine <span aria-hidden="true">&rarr;</span></span>
+            <div class="shelf__slot-body">
+              <div>
+                <h3 class="shelf__slot-title">Wine</h3>
+                <p class="shelf__slot-desc">Tasted and vetted vintages. Honest bottles under twenty dollars up to cellar-worthy reserve bottles.</p>
+              </div>
+              <span class="shelf__slot-arrow">Browse Wine <span aria-hidden="true">&rarr;</span></span>
+            </div>
           </a>
           
           <a href="/spirits/" class="shelf__slot scroll-reveal reveal-on-scroll">
-            <span class="shelf__slot-tag">Small-Batch &amp; Rare</span>
-            <div>
-              <h3 class="shelf__slot-title">Spirits</h3>
-              <p class="shelf__slot-desc">Texas bourbons, artisanal tequilas, sipping rums, and distinct botanical gins for discerning palates.</p>
+            <div class="shelf__slot-media">
+              <img src="/images/spirits.jpg" alt="Small-Batch Spirits selection" loading="lazy" width="400" height="250">
+              <span class="shelf__slot-badge">Small-Batch &amp; Rare</span>
             </div>
-            <span class="shelf__slot-arrow">Browse Spirits <span aria-hidden="true">&rarr;</span></span>
+            <div class="shelf__slot-body">
+              <div>
+                <h3 class="shelf__slot-title">Spirits</h3>
+                <p class="shelf__slot-desc">Texas bourbons, artisanal tequilas, sipping rums, and distinct botanical gins for discerning palates.</p>
+              </div>
+              <span class="shelf__slot-arrow">Browse Spirits <span aria-hidden="true">&rarr;</span></span>
+            </div>
           </a>
         </div>
       </div>
